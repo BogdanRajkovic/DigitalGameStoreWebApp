@@ -2,7 +2,7 @@
 
 Technologies:
 
-JavaScript, PHP
+JavaScript, PHP, SQL
 
 Description:
 
