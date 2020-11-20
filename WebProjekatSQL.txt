@@ -1,0 +1,66 @@
+create TABLE USERS
+(
+    UserID int not null AUTO_INCREMENT,
+    First_Name  varchar(50),
+    Last_Name  varchar(50),
+    Email   varchar(50),
+    Username  varchar(20),
+    Password_hash varchar(256),
+    Is_Admin bit,
+    Date_Created datetime not null,
+    Date_Deleted datetime,
+    constraint pk_users primary key(UserID)
+);
+Create TABLE GAMES
+(
+    GameID int not null AUTO_INCREMENT,
+    Game_Name varchar(50),
+    Game_Price numeric(6,2),
+    Game_Quantity int,
+    Game_Img_Url  varchar(50),
+    Game_Genre  varchar(50),
+    Date_Created datetime not null,
+    Date_Deleted datetime,
+    constraint pk_games primary key(GameID)
+);
+CREATE table GAME_STOCK
+(
+    Game_Stock_Id int not null AUTO_INCREMENT,
+    GameID int not null,
+    Game_Key int  not null,
+    Date_Created datetime not null,
+    Date_Deleted datetime,
+    constraint pk_game_stock primary key(Game_Stock_Id),
+    constraint fk_game_stock_games FOREIGN key(GameID)  REFERENCES GAMES(GameID)
+    
+);
+CREATE TABLE USER_GAMES
+(
+    User_Games_Id int not null AUTO_INCREMENT,
+    UserID int not null,
+    GameID int not null,
+    Game_Stock_Id int not null,
+    Is_Remarked bit,
+    Remark_Text varchar(256),
+    Date_Created datetime not null,
+    Date_Deleted datetime,
+    constraint pk_user_games primary key(User_Games_Id),
+    constraint fk_user_games_user FOREIGN key(UserID) REFERENCES USERS(UserID),
+    constraint fk_user_games_games FOREIGN key(GameID)  REFERENCES GAMES(GameID),
+    constraint fk_user_games_game_stock FOREIGN key(Game_Stock_Id)  REFERENCES GAME_STOCK(Game_Stock_Id)
+);
+
+
+
+
+INSERT INTO games 
+(
+    Game_Name,
+    Game_Price,
+    Game_Quantity,
+    Game_Img_Url,
+    Game_Genre,
+    Date_Created,
+    Date_Deleted )
+values 
+('Counter-Strike: Global Offensive',12.99,35,'img/csgo.jpg','FPS',now(),null)

@@ -1,0 +1,129 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Sep 24, 2018, 1:56:33 AM
+    Author     : Bogdan
+*/
+.header-wrapper {
+    background:  #202020;
+    width: 100%;
+    margin: 0px !important;
+    padding: 0;
+}
+
+/*TODO*/
+
+a{
+    color: #e68a00;
+}
+.header-image {
+    width: 170px;
+}
+
+li {
+    display: inline-block;
+    text-decoration: none;
+}
+li a{
+    text-decoration: none;
+    color: #e68a00;
+}
+ li a:hover {
+    text-decoration: underline;
+    color:#cc7a00;
+}
+.navigation{
+        margin-right: 15px;
+}
+
+.navigation-wrapper {
+    top: 60px;
+    font-size: 28px;
+}
+
+.form-wrapper {
+    padding-top: 5px;
+    float: right;
+}
+.form-wrapper button
+{
+    color: #e68a00;
+    border: solid 1px;
+    border-color: #e68a00;
+    background: #202020;
+}
+.form-wrapper button:hover
+{
+    text-decoration: underline;
+}
+.form-wrapper input
+{
+    color: #e68a00;
+    border: solid 1px;
+    border-color: #e68a00;
+    background: #202020;
+}
+.form-wrapper a{
+    color: #e68a00;
+}
+.form-wrapper a:hover{
+    text-decoration: underline;
+    color:#cc7a00;
+}
+/*-------------------------------------FOOTER----------------------------------*/
+.footer-wrapper {
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    bottom: 0;
+    background: #202020;
+    color: #808080;
+}
+.footer-wrapper a {
+    color: #e68a00;
+}
+.footer-wrapper a:hover {
+    text-decoration: underline;
+    color:#cc7a00;
+}
+/*-------------------------------------FOOTER----------------------------------*/
+@media only screen and (max-width: 1000px) {
+    .navigation-wrapper {
+        top: auto;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .navigation-wrapper {
+        text-align: center;
+    }
+    
+    .form-wrapper {
+        text-align: center;
+        float: none !important;
+    }
+}
+/*-------------------------------------SIGN-UP----------------------------------*/
+
+
+/*-------------------------------------SHOPPING-CART----------------------------------*/
+
+.product{
+    width: 300px;
+    border: solid 1px #cc7a00;
+    background-color: #202020;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 20px;
+    margin-top: 5px;
+    height: 580px;
+}
+.product-img{
+   width:  96%;
+   height: 380px;
+   margin-left: 2
+    
+}
