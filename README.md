@@ -1,4 +1,4 @@
-# GoodGameWebApp
+# DigitalGameStoreWebApp
 
 Technologies:
 
